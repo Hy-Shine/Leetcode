@@ -1,4 +1,8 @@
 /* Write your PL/SQL query statement below */
+
+-- db type: Oracle
+-- Level: Hard
+
 select date1 day,case when round(c2/c1,2)>0 then round(c2/c1,2) else 0 end "Cancellation Rate" 
 from 
 (select request_at date1,count(1) c1

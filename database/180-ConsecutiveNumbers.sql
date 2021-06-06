@@ -1,4 +1,8 @@
 /* Write your PL/SQL query statement below */
+
+-- db type: Oracle
+-- Level: Medium
+
 SELECT DISTINCT t.num ConsecutiveNums 
 	FROM logs t,logs t2,logs t3 
 WHERE t.id=(t2.id-1) AND t.num=t2.num 

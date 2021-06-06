@@ -1,4 +1,8 @@
 /* Write your PL/SQL query statement below */
+
+-- db type: Oracle
+-- Level: Medium
+
 SELECT name, population, area
 FROM
     World

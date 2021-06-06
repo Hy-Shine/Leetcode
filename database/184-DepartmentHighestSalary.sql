@@ -1,5 +1,9 @@
 -- 184. Department Highest Salary
 /* Write your PL/SQL query statement below */
+
+-- db type: Oracle
+-- Level: Medium
+
 select t2.name department,t.name employee,t.salary
 from employee t,department t2 
 where t.departmentid=t2.id 

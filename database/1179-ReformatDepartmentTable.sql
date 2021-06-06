@@ -1,4 +1,8 @@
 /* Write your PL/SQL query statement below */
+
+-- db type: Oracle
+-- Level: Easy
+
 select * from department
 	pivot(max(revenue) for month in 
 		('Jan' Jan_Revenue,'Feb' Feb_Revenue,'Mar' Mar_Revenue,

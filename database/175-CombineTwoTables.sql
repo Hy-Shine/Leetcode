@@ -1,4 +1,8 @@
 /* Write your PL/SQL query statement below */
+
+-- db type: Oracle
+-- Level: Easy
+
 SELECT a.FirstName, a.LastName, b.City, b.State
 FROM 
     Person a 
