@@ -1,4 +1,4 @@
-package main
+package go_leetcode
 
 import "fmt"
 
@@ -8,7 +8,7 @@ func main() {
 	fmt.Println(pascalTriangle(n))
 }
 
-func pascalTriangle(numRows int) []int {
+func pascalTriangle(numRows int) [][]int {
 	a := make([][]int, numRows)
 	for i := 0; i < numRows; i++ {
 		a[i] = make([]int, i+1)
@@ -20,5 +20,5 @@ func pascalTriangle(numRows int) []int {
 			}
 		}
 	}
-	return a[numRows-1]
+	return a
 }
