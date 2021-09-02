@@ -1,5 +1,7 @@
 # Leetcode
 
+**Database, algorithms, shell solutions**.
+
 | Number | Title |Languages | Level |
 | :----: | :--:|:-------: | :---: |
 | 1 | TwoSum |go/python | Easy |
