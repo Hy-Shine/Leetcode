@@ -2,6 +2,7 @@
 
 | Number | Title |Languages | Level |
 | :----: | :--:|:-------: | :---: |
+| 1 | TwoSum |go/python | Easy |
 | 2 | AddTwoNumbers |go | Medium |
 | 53 | MaximumSubarray |go | Easy |
 | 67 | AddBinary |go | Easy |
