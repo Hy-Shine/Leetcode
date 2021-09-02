@@ -3,6 +3,7 @@
 | Number | Title |Languages | Level |
 | :----: | :--:|:-------: | :---: |
 | 2 | AddTwoNumbers |go | Medium |
+| 53 | MaximumSubarray |go | Easy |
 | 67 | AddBinary |go | Easy |
 | 175 | CombineTwoTables | SQL-Oracle/MySQL | Easy |
 | 178 | ScoresRank | SQL-Oracle | Medium |
