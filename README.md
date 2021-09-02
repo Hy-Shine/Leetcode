@@ -12,4 +12,5 @@
 | 601 | HumanTrafficOfStadium | SQL-Oracle | Medium |
 | 626 | ExchangesSeats | SQL-Oracle | Medium |
 | 1179 | ReformatDepartmentTable | SQL-Oracle | Easy |
+| 2 | addTwoNumbers | go | Medium |
 
