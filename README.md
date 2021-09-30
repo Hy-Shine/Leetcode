@@ -1,6 +1,6 @@
 # Leetcode
 
-**Database, algorithms, shell solutions**.
+**This is all my solutions for database, algorithms and shell solutions on leetcode.**
 
 | Number | Title |Languages | Level |
 | :----: | :--:|:-------: | :---: |
