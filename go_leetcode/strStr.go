@@ -1,13 +1,5 @@
 package go_leetcode
 
-import "fmt"
-
-func main() {
-	s := "hello"
-	s0 := "ello"
-	fmt.Println(strStr(s, s0))
-}
-
 func strStr(haystack string, needle string) int {
 	if len(needle) == 0 {
 		return 0

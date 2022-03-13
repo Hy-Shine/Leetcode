@@ -1,14 +1,6 @@
 package go_leetcode
 
-import "fmt"
-
-// Pascal's Triangle
-func main() {
-	var n int = 6
-	fmt.Println(pascalTriangle(n))
-}
-
-func pascalTriangle(numRows int) [][]int {
+func pascalTriangle2(numRows int) []int {
 	a := make([][]int, numRows)
 	for i := 0; i < numRows; i++ {
 		a[i] = make([]int, i+1)
@@ -20,5 +12,5 @@ func pascalTriangle(numRows int) [][]int {
 			}
 		}
 	}
-	return a
+	return a[numRows-1]
 }
