@@ -1,16 +1,22 @@
 package go_leetcode
 
-import "strings"
-
-// Not finish!!!
-
 func romanToInt(s string) int {
-	n1 := strings.Count(s, "IV")
-	s = strings.ReplaceAll(s, "IV", "")
-	n2 := strings.Count(s, "XI")
-	s = strings.ReplaceAll(s, "XI", "")
-
-	return n1 + n2
+	l := len(s)
+	i, sum := 0, 0
+	for i < l {
+		if i == l-1 {
+			sum += romanMap[s[i:i+1]]
+			break
+		}
+		if v, ok := romanMap[s[i:i+2]]; ok {
+			sum += v
+			i += 2
+		} else {
+			sum += romanMap[s[i:i+1]]
+			i++
+		}
+	}
+	return sum
 }
 
 var romanMap = map[string]int{
@@ -22,9 +28,9 @@ var romanMap = map[string]int{
 	"D":  500,
 	"M":  1000,
 	"IV": 4,
-	"XI": 9,
+	"IX": 9,
 	"XL": 40,
-	"CX": 90,
+	"XC": 90,
 	"CD": 400,
-	"MC": 900,
+	"CM": 900,
 }
