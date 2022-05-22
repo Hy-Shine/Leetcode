@@ -1,3 +1,4 @@
 .vscode/
 .idea/
-temp/*
+draft/*
+*_test.go

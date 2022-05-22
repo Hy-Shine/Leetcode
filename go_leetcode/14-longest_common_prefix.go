@@ -2,10 +2,13 @@ package go_leetcode
 
 import "github.com/hy-shine/leetcode/go_leetcode/utils"
 
-func longestCommonPrefix(strs []string) string {
-	common := strs[0]
-	for i := 0; i < len(strs); i++ {
-		common = longestCommonPrefixTwoString(common, strs[i])
+func longestCommonPrefix(strList []string) string {
+	if len(strList) == 0 {
+		return ""
+	}
+	common := strList[0]
+	for i := 0; i < len(strList); i++ {
+		common = longestCommonPrefixTwoString(common, strList[i])
 	}
 	return common
 }
