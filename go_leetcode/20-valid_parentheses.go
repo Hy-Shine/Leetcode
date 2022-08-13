@@ -1,42 +1,27 @@
 package go_leetcode
 
-func isValid(s string) bool {
+import "github.com/hy-shine/leetcode/go_leetcode/stack"
+
+func IsValidParentheses(s string) bool {
 	if len(s)%2 == 1 {
 		return false
 	}
-	stack := make([]rune, 0)
+	nodeStack := stack.NewStack()
 	for _, v := range s {
 		if v == '[' || v == '(' || v == '{' {
-			stack = append(stack, v)
+			nodeStack.Push(v)
 			continue
 		}
-		index := len(stack)
-		if index == 0 {
-			return false
+		if v == ']' && nodeStack.Value() == '[' {
+			nodeStack.Pop()
 		}
-		switch {
-		case stack[index-1] != '[' && v == ']':
-			return false
-		case stack[index-1] != '(' && v == ')':
-			return false
-		case stack[index-1] != '{' && v == '}':
-			return false
-		case stack[index-1] == '[' && v == ']':
-			stack = push(stack)
-		case stack[index-1] == '(' && v == ')':
-			stack = push(stack)
-		case stack[index-1] == '{' && v == '}':
-			stack = push(stack)
+		if v == ')' && nodeStack.Value() == '(' {
+			nodeStack.Pop()
+		}
+		if v == '}' && nodeStack.Value() == '{' {
+			nodeStack.Pop()
 		}
 	}
 
-	return len(stack) == 0
-}
-
-func push(stack []rune) []rune {
-	l := len(stack)
-	if l == 1 {
-		return stack[0:0]
-	}
-	return stack[0 : l-1]
+	return nodeStack.IsEmpty()
 }

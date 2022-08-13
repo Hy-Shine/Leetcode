@@ -1,7 +1,7 @@
 package stack
 
 type nodeStack struct {
-	value int
+	value any
 	next  *nodeStack
 }
 
@@ -9,11 +9,11 @@ func NewStack() *nodeStack {
 	return &nodeStack{}
 }
 
-func (node *nodeStack) Push(val int) {
+func (node *nodeStack) Push(val any) {
 	node.next = &nodeStack{value: val, next: node.next}
 }
 
-func (node *nodeStack) Pop() (val int) {
+func (node *nodeStack) Pop() (val any) {
 	if node.next != nil {
 		val = node.next.value
 		node.next = node.next.next
@@ -21,17 +21,10 @@ func (node *nodeStack) Pop() (val int) {
 	return
 }
 
-func (node *nodeStack) Value() int {
+func (node *nodeStack) Value() any {
 	return node.next.value
 }
 
 func (node *nodeStack) IsEmpty() bool {
 	return node.next == nil
-}
-
-func (node *nodeStack) Len() (length int) {
-	for head := node; head.next != nil; head = head.next {
-		length++
-	}
-	return length
 }
