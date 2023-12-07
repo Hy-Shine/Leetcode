@@ -20,6 +20,3 @@
 | 601 | Human Traffic Of Stadium | SQL: Oracle | Medium |
 | 626 | Exchanges Seats | SQL: Oracle | Medium |
 | 1179 | Reformat Department Table | SQL: Oracle | Easy |
-
-
-
