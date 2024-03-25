@@ -24,11 +24,18 @@ func maxSubArray(nums []int) int {
 // URL https://en.wikipedia.org/wiki/Maximum_subarray_problem
 // O(n)
 func maxSubArray2(nums []int) int {
-	max_ending_here, max_so_far := nums[0], nums[0]
+	maxHere, maxSoFar := 0, math.MinInt
 	length := len(nums)
-	for i := 1; i < length; i++ {
-		max_ending_here = int(math.Max(float64(nums[i]), float64(max_ending_here+nums[i])))
-		max_so_far = int(math.Max(float64(max_so_far), float64(max_ending_here)))
+	for i := 0; i < length; i++ {
+		maxHere = calMax(nums[i], maxHere+nums[i])
+		maxSoFar = calMax(maxHere, maxSoFar)
 	}
-	return max_so_far
+	return maxSoFar
+}
+
+func calMax(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }

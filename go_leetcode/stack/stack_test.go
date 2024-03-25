@@ -17,3 +17,19 @@ func TestPush(t *testing.T) {
 		fmt.Println(val)
 	}
 }
+
+func TestStacks(t *testing.T) {
+	stack := NewStackS[int]()
+	var count int
+	for ; count < 100; count++ {
+		stack.Push(count)
+	}
+
+	for !stack.IsEmpty() {
+		count--
+		pop := stack.Pop()
+		if pop != count {
+			t.Errorf("want %d, but got %d\n", count, pop)
+		}
+	}
+}
